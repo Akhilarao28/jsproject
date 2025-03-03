@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Store</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    
+    <link rel="shortcut icon" href="data:;base64,iVBORw0KGgo=">
+
+
+</head>
+
+
+<body>
+    <div class="container">
+        <img src="https://media.istockphoto.com/id/1355290974/photo/dog-near-different-variation-of-goods-for-animals.jpg?s=612x612&w=0&k=20&c=mL_5zyUinqzo32fKV_0lb0ycD8NnvvlsKCBg51CbO2Q=" alt="Image" width="600px">
+
+        <form action="" id="signup">
+
+            <span>USERNAME</span>
+            <input type="text" name="" id="username" placeholder="Username" required>
+            <span id="usernameError"></span>
+
+            <span>EMAIL</span>
+            <input type="email" name="" id="email" placeholder="Email" required>
+            <span id="emailError"></span>
+
+            <span>PASSWORD</span>
+            <input type="password" name="" id="password" placeholder="Password" required>
+            <span id="passwordError"></span>
+
+            <input type="submit" value="Sign Up">
+
+            <a href="login.html">Existing User? Login</a>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("signup").addEventListener("submit", (event) => {
+            event.preventDefault();
+
+            const inputName = /^[a-zA-Z]{3,}$/;
+            const inputEmail = /^[a-zA-Z0-9._+-=]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            const inputPassword = /^(?=.[a-z])(?=.[A-Z])(?=.\d)(?=.[!@#$%^&()_+])[a-zA-Z0-9!@#$%^&()_+]{8,}$/;
+
+            document.getElementById("usernameError").textContent = "";
+            document.getElementById("emailError").textContent = "";
+            document.getElementById("passwordError").textContent = "";
+
+            const name = document.getElementById("username").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const password = document.getElementById("password").value.trim();
+
+            let isValid = true;
+
+            if (!inputName.test(name)) {
+                document.getElementById("usernameError").textContent =
+                    "Name should contain at least 3 characters.";
+                isValid = false;
+            }
+
+            if (!inputEmail.test(email)) {
+                document.getElementById("emailError").textContent = "Please enter a valid email.";
+                isValid = false;
+            }
+
+            if (!inputPassword.test(password)) {
+                document.getElementById("passwordError").textContent =
+                    "Password should contain at least 1 uppercase, 1 lowercase, 1 special character, and 1 digit.";
+                isValid = false;
+            }
+
+            const storedUsername = localStorage.getItem("name");
+            const storedEmail = localStorage.getItem("email");  
+
+            if (storedUsername==name &&  storedEmail==email) {
+                document.getElementById("usernameError").textContent = "User already exists. Please login.";
+                isValid = false;
+                
+            }
+
+            if (isValid) {
+                localStorage.setItem("name", name);
+                localStorage.setItem("password", password);
+                localStorage.setItem("email", email);
+            
+                // Hide the container
+                const container = document.querySelector(".container");
+                container.style.display = "none";
+            
+                // Create the message container
+                const messageContainer = document.createElement("div");
+                messageContainer.className = "redirect-container";
+            
+                // Add the message text
+                const textMessage = document.createElement("p");
+                textMessage.textContent = "Signup successful! Redirecting to login page...";
+                textMessage.className = "redirect-message";
+                messageContainer.appendChild(textMessage);
+            
+                // Add the custom loader
+                const loader = document.createElement("div");
+                loader.className = "loader";
+                messageContainer.appendChild(loader);
+            
+                // Append the message container to the body
+                document.body.appendChild(messageContainer);
+            
+                // Redirect after 3 seconds
+                setTimeout(() => {
+                    window.location.href = "login.html";
+                }, 1000);
+            }
+            
+            
+        });
+    </script>
+</body>
+
+</html>

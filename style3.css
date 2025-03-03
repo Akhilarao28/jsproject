@@ -1,0 +1,499 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+   header {
+    display: flex;
+    background-color: orange;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    /* height:90px;  */
+    /* position: sticky;
+    top:0px; */
+    position: fixed; 
+     width: 100%; 
+    top: 0;  
+     z-index: 1000;
+    
+  }
+  /* nav{
+    display: flex;
+  } */
+   
+
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Centers the navigation items horizontally */
+    align-items: center; /* Aligns items vertically if needed */
+    gap: 15px; /* Space between the items */
+    margin-top: 10px; /* Space from the top of the page */
+    position: relative;
+    left:200px;
+    top: 10px;
+}
+
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    padding: 8px 15px; /* Add padding for clickable area */
+    border-radius: 5px; /* Optional: Add rounded corners */
+}
+
+nav ul li a:hover {
+    background-color: #555; /* Optional: Hover effect */
+}
+
+  #p1{
+    position: relative;
+    left:1000px;
+    bottom:25px;
+    
+  } 
+  #p1 button{
+    background:none;
+   border:none;
+   outline:none;
+  }
+  #p1 i{
+    font-size: 20px;
+  }
+  #p1 span{
+    position: absolute;
+    top:-13px;
+    right:47px;
+    background-color: brown;
+    border-radius: 50px;
+    height: 18px;
+    width: 18px;
+    line-height: 18px;
+  }
+  #p1 button:hover{
+    transform: scale(1.1);
+  }
+
+
+  #container {
+  background-image: url("pictures/hero-banner.jpg");
+  height: 100vh; 
+  min-width: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  line-height: 1.1;
+  /* text-align: center; */
+   }  
+
+  
+  #container h2{
+    color:white;
+    font-size: 50px;
+    letter-spacing: 2px;
+    position: relative;
+    top: 90px;
+    font-weight: bold;
+    /* left:60px; */
+    /* margin:50px; */
+    padding: 70px;
+
+  }
+   section p{
+    font-size: 30px;
+    padding:60px 30px;
+    margin:10px 40px;
+  } 
+  section button{
+    background-color: black;
+    color: white;
+    padding:10px 10px;
+    border-radius: 20px;
+    font-size: 20px;
+    margin: 20px 60px;
+  } 
+  
+   #products {
+    /* display: inline-block; */
+    margin: 15px;
+    padding: 15px;
+    /* width: 200px; */
+    text-align: center;
+  }
+  section .top-categories{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 25px;
+  }
+  section .card{
+    height:320px;
+  }
+  .toy-category{
+    display: flex;
+    justify-content: space-evenly;
+    margin:30px;
+  }
+  #seller {
+    text-align: center;
+
+  }
+  #seller #p2{
+    font-size: 30px;
+    color:orange;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  #seller #p3{
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  #seller .best-seller{
+    display: flex;
+    justify-content: space-evenly;
+  }
+  #seller .best-seller .card{
+    height: 380px;
+    margin:20px;
+  }
+  #seller .best-seller .card:hover{
+    transform: scale(1.1);
+  }
+  #seller .best-seller .card .card-body span{
+    font-size: 18px;
+    
+  }
+  section .service{
+    text-align: center;
+    margin:90px;
+  }
+  section .service h3{
+    font-size: 35px;
+    margin:30px;
+    color:brown
+  }
+  section .service h3:hover{
+    color:rgb(106, 106, 247)
+  }
+
+   section .service-image{
+    display: flex;
+    justify-content: space-evenly;
+    margin:10px;
+    text-align: center;
+   
+  }
+  section .service-image .icons{
+    margin:30px;
+    padding-bottom: 50px;
+  }
+  .collection{
+  background-image: url("pictures/cta-bg.jpg");
+  height: 100vh; 
+  width: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+
+  }
+  .collection div{
+    position: relative;
+    top:200px;
+  }
+  
+  .collection div h4{
+    font-size: 40px;
+   margin: 35px;
+  }
+  .collection div h5{
+    font-size: 27px;
+    margin:40px;
+  }
+  .brands{
+    margin:100px;
+  }
+  section #p4{
+    text-align: center;
+
+  }
+  section #p4{
+    margin: 40px;
+    font-size: 30px;
+    color: rgb(80, 7, 196);
+  }
+  section #p4:hover{
+    color:brown;
+    transform: scale(1.1);
+  }
+  section .popular-brands{
+    display: flex;
+    justify-content: space-around;
+    height: 180px;
+    
+  }
+  footer{
+    background-image: url("pictures/footer-bg.jpg");
+    min-height: 500px; 
+    width: 100vw;
+  /* background-attachment:fixed; */
+  /* background-position: center; */
+  background-repeat: no-repeat;
+  background-size:cover;
+  /* object-fit: contain; */
+  }
+  footer #footer-content{
+    display: flex;
+    justify-content: space-around;
+    color:beige;
+    margin: 70px;
+    position: relative;
+    top:200px;
+  }
+  footer #footer-content .footer-left{
+    margin: 5px;
+  }
+  footer #footer-content .footer-left span i{
+    font-size: 30px;
+  }
+  footer #footer-content .footer-left mark{
+    color:rgb(225, 103, 4);
+  }
+  footer #footer-content ul{
+    list-style: none;
+    padding-left: 1px;
+
+  }
+  footer #footer-content ul li{
+    margin:7px;
+    font-weight: lighter;
+  }
+  footer #footer-content ul li:hover{
+    text-decoration:underline;
+  }
+  
+
+/* For screens smaller than 1200px (tablets and large devices) */
+@media (max-width: 1200px) {
+  header {
+    padding: 10px 15px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+    left: 0;
+    top: 0;
+  }
+
+  #container h2 {
+    font-size: 40px;
+    padding: 50px;
+  }
+
+  #products .top-categories,
+  .toy-category {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .top-categories .card, .toy-category .card {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  #seller .best-seller {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .best-seller .card {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+
+  .service-image {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .collection {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .collection div h4 {
+    font-size: 30px;
+  }
+
+  .collection div h5 {
+    font-size: 20px;
+  }
+
+  footer #footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  footer #footer-content .footer-left {
+    text-align: center;
+  }
+
+  footer #footer-content .footer-left span i {
+    font-size: 25px;
+  }
+}
+
+/* For screens smaller than 768px (small devices like phones) */
+@media (max-width: 768px) {
+  header {
+    padding: 10px 10px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 0;
+  }
+
+  #container h2 {
+    font-size: 30px;
+    padding: 30px;
+  }
+
+  #products .top-categories,
+  .toy-category {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .top-categories .card, .toy-category .card {
+    width: 90%;
+  }
+
+  #seller .best-seller {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .best-seller .card {
+    width: 90%;
+  }
+
+  .service-image {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service-image .icons {
+    margin: 10px 0;
+    padding: 10px;
+  }
+
+  .collection div h4 {
+    font-size: 25px;
+  }
+
+  .collection div h5 {
+    font-size: 18px;
+  }
+
+  footer #footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  footer #footer-content .footer-left,
+  footer #footer-content .footer-right,
+  footer #footer-content .information,
+  footer #footer-content .services {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  footer #footer-content .footer-left span i {
+    font-size: 20px;
+  }
+}
+
+/* For screens smaller than 480px (extra small devices) */
+@media (max-width: 480px) {
+  header {
+    padding: 10px 5px;
+  }
+
+  nav ul {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  #container h2 {
+    font-size: 25px;
+    padding: 20px;
+  }
+
+  #products .top-categories,
+  .toy-category {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .top-categories .card, .toy-category .card {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  #seller .best-seller {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .best-seller .card {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .service-image {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .collection {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .collection div h4 {
+    font-size: 22px;
+  }
+
+  .collection div h5 {
+    font-size: 16px;
+  }
+
+  footer #footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  footer #footer-content .footer-left,
+  footer #footer-content .footer-right,
+  footer #footer-content .information,
+  footer #footer-content .services {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  footer #footer-content .footer-left span i {
+    font-size: 18px;
+  }
+}
